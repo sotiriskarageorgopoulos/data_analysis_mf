@@ -1,0 +1,1 @@
+kyphosis <- read.csv("../datasets/")#kypshosis data set is missing
