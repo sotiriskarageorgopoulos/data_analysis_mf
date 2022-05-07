@@ -1,3 +1,4 @@
+#Sotirios Karageorgopoulos
 faithfull <- read.table("C:\\Users\\sotir\\Dev\\data_analysis_mf\\datasets\\faithfull.txt",sep="	",header=TRUE)
 
 linear_regression <- lm(eruptions ~ waiting, data = faithfull)

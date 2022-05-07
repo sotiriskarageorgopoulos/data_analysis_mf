@@ -1,3 +1,4 @@
+#Sotirios Karageorgopoulos
 library("psych")
 insurance <- read.csv("C:\\Users\\sotir\\Dev\\data_analysis_mf\\datasets\\insurance.csv")
 

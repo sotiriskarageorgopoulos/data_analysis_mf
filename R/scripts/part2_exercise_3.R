@@ -1,3 +1,4 @@
+#Sotirios Karageorgopoulos
 mtcars <- read.table("C:\\Users\\sotir\\Dev\\data_analysis_mf\\datasets\\mtcars.csv",sep=",",header=TRUE)
 automatic_transmission <- mtcars[(mtcars$am == 0),]$mpg
 manual_transmission <- mtcars[(mtcars$am == 1),]$mpg

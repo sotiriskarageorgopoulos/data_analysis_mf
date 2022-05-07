@@ -1,3 +1,5 @@
+#Sotirios Karageorgopoulos
+
 cider <- read.csv("C:\\Users\\sotir\\Dev\\data_analysis_mf\\datasets\\cider.csv")
 important_features <- c("Sweetness","Acid","Bitterness","Astringent")
 print(cor(cider[important_features]))

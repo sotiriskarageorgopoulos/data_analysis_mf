@@ -1,3 +1,4 @@
+#Sotirios Karageorgopoulos
 library('MASS')
 data("survey")
 s <- survey
