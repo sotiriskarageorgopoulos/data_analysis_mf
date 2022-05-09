@@ -23,3 +23,5 @@ n <- 240
 error <- qnorm(0.975)*sd/sqrt(n)
 left <- mean-error
 right <- mean+error
+left
+right
