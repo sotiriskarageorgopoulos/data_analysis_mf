@@ -1,3 +1,5 @@
+#koutsoukos
+
 install.packages("dbscan")
 
 y <- c(5,6,8,7,6,5,3,2,8,7,5,3,8,6,4,7,6,5,4,4,3,5,2)

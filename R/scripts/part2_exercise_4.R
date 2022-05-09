@@ -1,3 +1,5 @@
+#koutsoukos
+
 data <- read.delim("C:\\Users\\Kostas\\Dev\\data_analysis_mf\\datasets\\OctopusF.txt")
 
 #Task 1
