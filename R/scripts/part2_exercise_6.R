@@ -1,3 +1,5 @@
+#koutsoukos
+
 library(readxl)
 concrete <- read_excel("C:\\Users\\Kostas\\Dev\\data_analysis_mf\\datasets\\Concrete_Data.xls")
 
@@ -23,8 +25,10 @@ set.seed(12345) # to guarantee repeatable results
 concrete_model <- neuralnet(formula = Concrete ~ Cement + Slag + Ash + Water + Superplasticizer + 
                               CoarseAggregate + FineAggregate + Age, data = concrete_train)
 
-plot(concrete_model) # multi-layer with a singal node 
+plot(concrete_model) # multi-layer with a single node 
 model_results <- compute(concrete_model, concrete_test[1:8]) # compute
+model_results2 <- predict(concrete_model, concrete_test[1:8]) # predict
+
 predicted_strength <- model_results$net.result
 cor(predicted_strength, concrete_test$Concrete)
 

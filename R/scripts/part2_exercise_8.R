@@ -1,3 +1,5 @@
+#koutsoukos
+
 library(readxl)
 market <- read_excel("C:\\Users\\Kostas\\Dev\\data_analysis_mf\\datasets\\market.xlsx")
 
@@ -21,6 +23,7 @@ summary(modelPrice)
 cordata <- market[c("Sales","Preis","Costs","Arrivals")]
 corr <- round(cor(cordata), 1)
 
+library(ggcorrplot)
 ggcorrplot(corr, hc.order = TRUE, type = "lower", lab = TRUE, lab_size = 4,
            method="circle", colors = c("blue", "white", "red"), outline.color = "gray",
            show.legend = TRUE, show.diag = FALSE, title="Correlogram of Sales variables")
