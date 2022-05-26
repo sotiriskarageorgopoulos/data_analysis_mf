@@ -21,5 +21,13 @@ class <- unclass(class)
 
 df <- data.frame(ID=id,Gender=gender,Car=car,Shirt=shirt,Class=class)
 
+library(ineq)
+Gini(df$ID) #0.317
+Gini(df$Gender) #0.167
+Gini(df$Car) #0.182
 
-Gini(class)
+m <- as.matrix(df)
+Gini(m) #0.5
+
+# v) gender <- smallest gini
+# vi) The attribute cannot be used for prediction (it has no predictive power) since Customer IDs are uniquw.
