@@ -1,3 +1,4 @@
+%author Sotirios Karageorgopoulos
 x = importdata("C:\Users\sotir\Dev\data_analysis_mf\datasets\mv_regressionx.dat");
 y = importdata("C:\Users\sotir\Dev\data_analysis_mf\datasets\mv_regressiony.dat");
 
@@ -17,6 +18,6 @@ for a=learning_rates
    xlabel("iterations");
    xticklabels('');
    yticklabels('');
-   ylabel(sprintf("J"));
+   ylabel("J");
    grid on
 end

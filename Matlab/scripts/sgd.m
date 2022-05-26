@@ -1,3 +1,4 @@
+%author Sotirios Karageorgopoulos
 function [J_costs,thetas] = sgd(x_bar,y,thetas,alpha,iterations) 
    m = length(y);
    J_costs = zeros(iterations,1);
