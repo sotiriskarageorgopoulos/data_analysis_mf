@@ -10,6 +10,7 @@ m2 <- c(0.61,0.03,0.68,0.31,0.45,0.09,0.38,0.05,0.01,0.04)
 
 df <- data.frame(class,m1,m2)
 
+#i
 pred1 <- prediction(df$m1,df$class)
 pred2 <- prediction(df$m2,df$class)
 
@@ -25,7 +26,7 @@ legend("bottomright", c("m1", "m2"), lty=1,
 
 #The higher the AUC, the better the performance of the model at distinguishing
 #between the positive and negative classes. 
-# Area Under the Curve (AUC)
+# AUC: Area Under the Curve
 
 #---------------------------------------------------------------------------------------------------
 
@@ -45,16 +46,18 @@ table(class,m1>0.5) # assuming threshold to be 0.5
 
 #Precision : TP / (TP+FP)
 precision <- 3/(3+1) #0.75
+precision
 
 #Recall : TP / (TP+FN)
 recall <- 3/(3+2) #0.6
+recall
 
 #F Score : (2*Precision*Recall) / (Precision+Recall)
 f <- 2*precision*recall/(precision+recall) #0.66
-
+f
 
 #---------------------------------------------------------------------------------------------------
-
+#ii
 table(class,m2>0.5) # assuming threshold to be 0.5
 
 # class FALSE TRUE
@@ -63,13 +66,16 @@ table(class,m2>0.5) # assuming threshold to be 0.5
 
 
 precision2 <- 1/(1+1) #0.5
+precision2
 recall2 <- 1/(1+4)  #0.2
+recall2
 f2 <- 2*precision2*recall2/(precision2+recall2) #0.28
+f2
 
 # f1 > f2
 
 #---------------------------------------------------------------------------------------------------
-
+#iii
 table(class,m1>0.1) # assuming threshold to be 0.1
 
 # class FALSE TRUE
@@ -77,10 +83,13 @@ table(class,m1>0.1) # assuming threshold to be 0.1
 # +     0     5
 
 #Precision : TP / (TP+FP)
-precision <- 5/(5+4) #0.55
+precision3 <- 5/(5+4) #0.55
+precision3
 
 #Recall : TP / (TP+FN)
-recall <- 5/(5+0) #1
+recall3 <- 5/(5+0) #1
+recall3
 
 #F Score : (2*Precision*Recall) / (Precision+Recall)
-f <- 2*precision*recall/(precision+recall) #0.71
+f3 <- 2*precision3*recall3/(precision3+recall3) #0.71
+f3

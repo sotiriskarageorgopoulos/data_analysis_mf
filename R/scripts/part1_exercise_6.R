@@ -12,3 +12,9 @@ decathlon.hcpc <- HCPC(decathlon, kk=Inf, min=3, max=10, consol=TRUE)
 res.hcpc <- HCPC(res, kk=Inf, min=3, max=10, consol=TRUE)
 
 
+#kmeans
+
+clean = scale(decathlon[,1:10])
+
+results <- kmeans(clean, centers=4)
+results

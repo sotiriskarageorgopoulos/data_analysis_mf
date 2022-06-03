@@ -20,7 +20,7 @@ concrete_test <- concrete_norm[774:1030, ]
 # Train the neuralnet model:
 library(neuralnet)
 
-# Simple ANN with only a single hidden neuron:
+# One hidden neuron:
 set.seed(12345) # to guarantee repeatable results
 concrete_model <- neuralnet(formula = Concrete ~ Cement + Slag + Ash + Water + Superplasticizer + 
                               CoarseAggregate + FineAggregate + Age, data = concrete_train)
