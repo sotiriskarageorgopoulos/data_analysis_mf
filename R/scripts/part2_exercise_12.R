@@ -28,4 +28,5 @@ plot(1:k.max, wss,
      xlab="Number of clusters K",
      ylab="Total within-clusters sum of squares")
 
-kmeans(df,3)
+clustersNum <- kmeans(df,3)
+plot(df,col=clustersNum$cluster, pch = 19)
