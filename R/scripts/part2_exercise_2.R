@@ -14,7 +14,7 @@ barplot(gender, ylim=c(0,250), ylab = "Balance", xlab = "Gender",
 pie(gender, main = "Pie balance ~ gender", col = c('green', '#1F77B4'), legend = TRUE)
 
 #ii - boxplots
-boxplot(capital, main = 'Boxplot for balance andgender')
+boxplot(capital, main = 'Boxplot for balance and gender')
 boxplot(capital$balance, main="Balance boxplot", ylab="Balance")
 boxplot(capital$gender, main="Gender boxplot", ylab="Gender")
 boxplot(capital$balance ~ capital$gender, main="Balance ~ Gender boxplot", xlab = "Gender", ylab = "Balance")

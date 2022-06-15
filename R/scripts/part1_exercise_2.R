@@ -31,11 +31,11 @@ Gini.ID
 
 
 #iii
-table(df$Gender)
-table(c0$Gender)
-table(c1$Gender)
+genderFreq <- table(df$Gender)
+gendec0rFreq <- table(c0$Gender)
+genderc1Freq <- table(c1$Gender)
 
-Gini.Male <- 1 - (6/10)^2 -(4/10)^2
+Gini.Male <- 1 - (gendec0rFreq[2]/genderFreq[2])^2 -(genderc1Freq[2]/genderFreq[2])^2
 Gini.Female <- 1- (4/10)^2 - (6/10)^2
 Gini.Gender <- (10/20)*0.48 + (10/20)*0.48
 

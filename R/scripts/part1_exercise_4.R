@@ -33,7 +33,7 @@ legend("bottomright", c("m1", "m2"), lty=1,
 library(caret)
 confusionMatrix(df$class, df$m1)
 
-table(class,m1>0.5) # assuming threshold to be 0.5
+t1 <- table(class,m1>0.5) # assuming threshold to be 0.5
 
 # class FALSE TRUE
 # -     TN    FP
@@ -45,11 +45,11 @@ table(class,m1>0.5) # assuming threshold to be 0.5
 # +     2     3
 
 #Precision : TP / (TP+FP)
-precision <- 3/(3+1) #0.75
+precision <- t1[4]/(t1[4]+t1[3]) #0.75
 precision
 
 #Recall : TP / (TP+FN)
-recall <- 3/(3+2) #0.6
+recall <- t1[4]/(t1[4]+t1[2]) #0.6
 recall
 
 #F Score : (2*Precision*Recall) / (Precision+Recall)
@@ -58,16 +58,16 @@ f
 
 #---------------------------------------------------------------------------------------------------
 #ii
-table(class,m2>0.5) # assuming threshold to be 0.5
+t2 <- table(class,m2>0.5) # assuming threshold to be 0.5
 
 # class FALSE TRUE
 # -     4     1
 # +     4     1
 
 
-precision2 <- 1/(1+1) #0.5
+precision2 <- t2[4]/(t2[4]+t2[3]) #0.5
 precision2
-recall2 <- 1/(1+4)  #0.2
+recall2 <- t2[4]/(t2[4]+t2[2])  #0.2
 recall2
 f2 <- 2*precision2*recall2/(precision2+recall2) #0.28
 f2
@@ -76,18 +76,18 @@ f2
 
 #---------------------------------------------------------------------------------------------------
 #iii
-table(class,m1>0.1) # assuming threshold to be 0.1
+t3 <- table(class,m1>0.1) # assuming threshold to be 0.1
 
 # class FALSE TRUE
 # -     1     4
 # +     0     5
 
 #Precision : TP / (TP+FP)
-precision3 <- 5/(5+4) #0.55
+precision3 <- t3[4]/(t3[4]+t3[3]) #0.55
 precision3
 
 #Recall : TP / (TP+FN)
-recall3 <- 5/(5+0) #1
+recall3 <- t3[4]/(t3[4]+t3[2]) #1
 recall3
 
 #F Score : (2*Precision*Recall) / (Precision+Recall)
