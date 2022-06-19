@@ -22,7 +22,8 @@ c1 <- df[11:20,]
 #The Gini index is 1 minus the sum of the fraction of records belonging to i at a given node t.
 
 #i
-totalFreq <- table(df$Class)
+totalFreq <- addmargins(t(table(df$Class)))
+Gini.Total <- 1 - (totalFreq[1,1]/totalFreq[1,3])^2 - (totalFreq[1,2]/totalFreq[1,3])^2
 
 #ii
 IDFreq <- addmargins(t(table(df$ID)))
