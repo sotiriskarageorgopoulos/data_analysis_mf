@@ -5,7 +5,11 @@ mf <- read_excel("C:\\Users\\Kostas\\Dev\\data_analysis_mf\\datasets\\mf.xls")
 
 #contingency table
 table(mf$`Dollar Claim Amount`, mf$Shift)
-
+table(mf$`Dollar Claim Amount`, mf$`Complaint Code`)
+table(mf$`Dollar Claim Amount`, mf$`Manufacturing Plant`)
+table(mf$`Dollar Claim Amount`, mf$Shift)
+table(mf$`Complaint Code`, mf$Shift)
+table(mf$`Complaint Code`, mf$`Manufacturing Plant`)
 
 #ii
 contigency_table <- table(mf$`Complaint Code`, mf$`Manufacturing Plant`)
