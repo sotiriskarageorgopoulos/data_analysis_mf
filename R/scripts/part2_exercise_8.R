@@ -16,7 +16,7 @@ summary(modelCosts)
 modelArrivals <- lm(Sales ~ Arrivals, data = market)
 summary(modelArrivals)
 
-modelPrice <- lm(Sales ~ Preis, data = market)
+modelPrice <- lm(Sales ~ Costs, data = market)
 summary(modelPrice)
 
 #iii
