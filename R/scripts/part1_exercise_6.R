@@ -16,11 +16,8 @@ res.hcpc <- HCPC(res, kk=Inf, min=3, max=10, consol=TRUE)
 
 clean = scale(decathlon[,1:10])
 
-results <- kmeans(res$var$coord[,1:2], centers=4)
+results <- kmeans(clean, centers=5)
 results
-
-plot(results, col = results$cluster)
-plot(decathlon,col=results$cluster, pch = 19,  main = " X and Y plot after kmeans")
 
 library(factoextra)
 k2 <- kmeans(clean, centers = 5, nstart = 25)
